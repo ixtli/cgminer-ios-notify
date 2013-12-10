@@ -79,6 +79,10 @@ def checkRabbit(threshold):
         return;
 
 if __name__ == "__main__":
-    checkRabbit(1000);
+    if len(sys.argv) < 2:
+        print "USAGE: ", sys.argv[0], " <MIN HASHRATE>";
+        sys.exit(1);
+    cutoff = sys.argv[1]:
+    checkRabbit(int(cutoff));
     sys.exit(0);
 
