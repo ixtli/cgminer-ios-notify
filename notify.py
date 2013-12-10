@@ -5,12 +5,10 @@ import socket, json, sys, httplib, datetime;
 from xml.dom.minidom import parseString;
 from urllib import urlencode;
 
-apiURL = "api.prowlapp.com";
-prowlKey = "9739ad3d982355711a879ba66cbf1d1642eae48a";
+from apiKeys import prowlKey, rabbitKey, rabbitID;
 
+apiURL = "api.prowlapp.com";
 rabbitURL = "www.ltcrabbit.com"
-rabbitID = 6351;
-rabbitKey = "319b11ea3f9825bc5695a16f2ba9985264b48ca1eabd26376052361bb0229c92";
 
 def sendNotification(name, event, description, priority = 0):
     # Construct arguments to the api
